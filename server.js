@@ -28,8 +28,6 @@ app.get('/run-query', async (req, res) => {
     try {
         const { query } = req.query; // Assuming the query is sent from App.js as a query parameter
 
-        // You might perform some validation or sanitization of the query here before executing it
-
         const result = await client.query(query);
 
         res.json({ result: result.rows });
